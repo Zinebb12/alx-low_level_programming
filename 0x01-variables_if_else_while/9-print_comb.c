@@ -10,15 +10,17 @@
 */
 int main(void)
 {
-	int d = 48;
+	int num = 0;
 
-	while (d <= 102)
+	while (num <= 9)
 	{
-	putchar(d);
-
-	if (d == 57)
-	d += 39;
-	d++;
+	putchar(num + 48);
+	if (num != 9)
+	{
+	putchar(',');
+	putchar(' ');
+	}
+	num++;
 	}
 	putchar('\n');
 	return (0);
