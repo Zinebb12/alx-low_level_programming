@@ -6,14 +6,9 @@
 */
 void print_line(int n)
 {
-	int checker;
-
-	if (n <= 0)
-	_putchar('\n');
-	else
-	{
-	for (checker = 1; checker <= n; checker++)
-	putchar('');
-	_putchar('\n');
-	}
+while (n-- > 0)
+{
+_putchar('_');
+}
+_putchar('\n');
 }
