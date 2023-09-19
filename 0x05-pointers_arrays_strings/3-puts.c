@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+
 /**
 *_puts - is a function that take pointer as parameter
 *@str: is the name of the variable
