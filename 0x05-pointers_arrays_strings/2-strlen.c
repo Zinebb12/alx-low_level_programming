@@ -6,7 +6,7 @@
  * @s: is charactaer data type with name of s
  * Return: the len of a character
  */
-int _strlen(char s)
+int _strlen(char *s)
 {
 	int results = strlen(s);
 
