@@ -1,17 +1,14 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 /**
-
-*swap_int - take two pointers as an integer
-*@a: the first int
-*@b: the second int
-*Return: swap two value between each others
-*/
-void swap_int(int a, intb)
+ * _strlen - take a pointers as a parameters
+ * @s: is charactaer data type with name of s
+ * Return: the len of a character
+ */
+int _strlen(char s)
 {
-	int x;
+	int results = strlen(s);
 
-	x = *b;
-	b =a;
-	*a = x;
+	return (results);
 }
