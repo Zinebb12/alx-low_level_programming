@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  * rot13 -  the main function
  *
@@ -8,7 +7,6 @@
  *
  * Return:  the String function
  */
-
 char *rot13(char *s)
 {
 	int a, r;
