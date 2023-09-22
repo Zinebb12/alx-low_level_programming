@@ -1,30 +1,33 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * rot13 -  the main function
+ * rot13 - main function
  *
- * @s:  the String pointer
+ * @s: String poiner
  *
- * Return:  the String function
+ * Return: String function
  */
+
 char *rot13(char *s)
 {
-	int a, r;
+	int k, r;
 	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (a = 0; s[a] != '\0'; a++)
+	for (k = 0; s[k] != '\0'; k++)
 	{
-	for (b = 0; b < 52; b++)
+	for (r = 0; r < 52; r++)
 	{
-	if (s[a] == data1[b])
+	if (s[k] == data1[r])
 	{
-	s[a] = datarot[b];
+	s[k] = datarot[r];
 	break;
 	}
 	}
 	}
 	return (s);
 }
+
 
 
