@@ -1,15 +1,16 @@
 #include "main.h"
 /**
- * leet - change letters to numbers
- * @n input value
- * Return : value of n
- */
-char *leet(char *);
+  *leet -  the main function
+  *
+  * @n: the function parameter
+  *
+  *Return:  the value of n
+  */
+char *leet(char *n)
 {
+	int a, b;
 	char s1[] = "aAeEoOtTlL";
 	char s2[] = "4433007711";
-	int a;
-	int b;
 
 	for (a = 0; n[a] != '\0'; a++)
 	{
@@ -23,3 +24,5 @@ char *leet(char *);
 	}
 	return (n);
 }
+
+
