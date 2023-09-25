@@ -5,7 +5,7 @@
 * @b: constant byte
 * @n: number of bytes
 * return: 0 (success)
-	*/
+*/
 char *_memset(char *s, char b, unsigned int n);
 {
 	unsigned int i;
