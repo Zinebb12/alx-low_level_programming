@@ -4,17 +4,17 @@
 /**
  * main - adds positive numbers.
  * @argc: argument count
- * @argv: argument vector
+ * @argv: arguments vector
  * Return: 0
  */
 int main(int argc, char **argv)
 {
-	int i, j, rslt = 0;
+	int i, n, sum = 0;
 	char *something;
 
 	if (argc < 2)
 	{
-		printf("0\j");
+		printf("0\n");
 		return (0);
 	}
 
@@ -23,15 +23,15 @@ int main(int argc, char **argv)
 		n = strtol(argv[i], &something, 10);
 		if (*something)
 		{
-			printf("Error\j");
+			printf("Error\n");
 			return (1);
 		}
 		else
 		{
-			rslt += j;
+			sum += n;
 		}
 	}
-	printf("%d\n", rslt);
+	printf("%d\n", sum);
 
 	return (0);
 }
