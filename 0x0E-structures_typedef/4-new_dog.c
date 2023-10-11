@@ -1,43 +1,49 @@
-#include "dog.h"
-#include <string.h>
 #include <stdlib.h>
+#include "dog.h"
 
 /**
- * new_dog - Creates a new dog structure
- * @name: Name of the dog
- * @age: Age of the dog
- * @owner: Owner of the dog
+ * new_dog - creates a new dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
  *
- * Return: Pointer to the new dog
+ * Return: pointer to new dog
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *sweet_dog;
-	char *sweet_name, *sweet_owner;
+	dog_t *new_dog;
+	int x, y, z;
 
-	sweet_dog = (dog_t *)malloc(sizeof(dog_t));
-	if (!sweet_dog)
+	if (name == NULL || owner == NULL)
 		return (NULL);
 
-	sweet_name = (char *) malloc(sizeof(sweet_dog->name) * (strlen(name) + 1));
-	sweet_owner = (char *) malloc(sizeof(sweet_dog->name) * (strlen(owner) + 1));
+	new_dog = malloc(sizeof(dog_t));
+	if (new_dog == NULL)
+		return (NULL);
 
-	if (!sweet_name || !sweet_owner)
+	for (x = 0; name[x]; x++)
+		;
+	x++;
+	new_dog->name = malloc(x * sizeof(char));
+	if (new_dog->name == NULL)
 	{
-
-		free(sweet_dog);
-		free(sweet_name);
-		free(sweet_owner);
+		free(new_dog);
 		return (NULL);
 	}
-
-	strcpy(sweet_owner, owner);
-	strcpy(sweet_name, name);
-
-	sweetdog->name = sweet_name;
-	sweet_dog->owner = sweet_owner;
-	sweet_dog->age = age;
-
-	return (sweet_dog);
+	for (y = 0; owner[y]; y++)
+		;
+	y++;
+	new_dog->owner = malloc(y * sizeof(char));
+	if (new_dog->owner == NULL)
+	{
+		free(new_dog->name);
+		free(new_dog);
+		return (NULL);
+	}
+	for (z = 0; z < x; z++)
+		new_dog->name[z] = name[z];
+	new_dog->age = age;
+	for (z = 0; z < y; z++)
+		new_dog->owner[z] = owner[z];
+	return (new_dog);
 }
