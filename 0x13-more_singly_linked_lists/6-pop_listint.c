@@ -1,20 +1,19 @@
 #include "lists.h"
 /**
- * free_listint2 - function that frees a listint_t list.
- * @head: pointer to the list
- * Return: void
+ * pop_listint - deletes the head node
+ * @head: ptr to the list
+ * Return: 0 if empty otherwise 1
  */
-void free_listint2(listint_t **head)
+int pop_listint(listint_t **head)
 {
-	listint_t *tmp;
+	listint_t *first;
+	int i;
 
-	if (head == NULL)
-		return;
-	while (*head != NULL)
-	{
-		tmp = (*head)->next;
-		free(*head);
-		*head = tmp;
-	}
-	head = NULL;
+	if (*head == NULL)
+		return (0);
+	first = *head;
+	i = (*head)->n;
+	*head = (*head)->next;
+	free(first);
+	return (i);
 }
