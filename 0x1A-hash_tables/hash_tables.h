@@ -20,6 +20,7 @@ typedef struct hash_node_s
 	struct hash_node_s *next;
 } hash_node_t;
 
+
 /**
  * struct hash_table_s - Hash table data structure
  *
@@ -35,6 +36,7 @@ typedef struct hash_table_s
 } hash_table_t;
 
 hash_table_t *hash_table_create(unsigned long int size);
-
+unsigned long int key_index(const unsigned char *key, unsigned long int size);
+unsigned long int hash_djb2(const unsigned char *str);
 
 #endif
